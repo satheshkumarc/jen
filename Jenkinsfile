@@ -6,5 +6,7 @@ pipeline {
                 echo "Hello World!"
             }
         }
+	stage('Email Notification'){
+	mail bcc: '', body: 'Success', cc: '', from: '', replyTo: '', subject: 'Jenkins Build', to: 'satheshdevel@gmail.com'
     }
 }
