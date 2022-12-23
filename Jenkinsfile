@@ -10,7 +10,7 @@ pipeline {
     }
     post {
         always {
-            mail bcc: '', body: 'Jenkins Build', cc: '', from: '', replyTo: '', subject: 'Test Jenkins', to: 'satheshdevel@gmail.com'
+            mail bcc: '', body: 'Jenkins Build for web laravel', cc: '', from: '', replyTo: '', subject: 'Test Jenkins', to: 'alexander@rattletech.in'
         }
     }
 }
