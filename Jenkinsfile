@@ -1,12 +1,16 @@
 pipeline {
-    agent none
+    agent any
+     
     stages {
-        stage('build') {
+        stage('Ok') {
             steps {
-                echo "Hello World!"
+                echo "Success"
             }
         }
-	stage('Email Notification'){
-	mail bcc: '', body: 'Success', cc: '', from: '', replyTo: '', subject: 'Jenkins Build', to: 'satheshdevel@gmail.com'
+    }
+    post {
+        always {
+            mail bcc: '', body: 'Jenkins Build', cc: '', from: '', replyTo: '', subject: 'Test Jenkins', to: 'satheshdevel@gmail.com'
+        }
     }
 }
